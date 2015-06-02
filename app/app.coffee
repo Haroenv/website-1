@@ -87,6 +87,7 @@ class App extends tweak.Controller
     if page is '' then page = 'about'
     if pages.indexOf(page) is -1 then page = 'about'
     @page = @pages[page]
+    @triggerEvent 'page:changed', page
 
   scrollTo: (page, speed = 1) ->
     point = $("[data-scroll='#{page}'] > section").offset().top or 0

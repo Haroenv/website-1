@@ -5,16 +5,11 @@ module.exports = exports = class HeaderView extends tweak.View
     links.on 'click', ->
       root.scrollTo $(@).attr('data-link').replace /^([\/\\])+/, ''
 
-    ###
-      Add an active class on first button
-    ###
-    $(links[0]).addClass 'active'
-
     links.on 'mouseover touchstart', @buttonOver
     links.on 'mouseout click touchend', @buttonOut
 
-    @root.router.addEvent 'goTo:page', (data) ->
-      data = data.data[0]
+    @root.addEvent 'page:changed', (data) ->
+      console.log data
       links.each ->
         $targ = $(@)
         $targ.removeClass 'active'
