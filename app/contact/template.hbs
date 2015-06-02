@@ -1,0 +1,29 @@
+<article data-scroll="contact">
+
+  <div class="bg-image"></div>
+  <section>
+    <article>
+      <h1>Contact</h1>
+      <p>Please fill in your contact details along with your message. A word of caution; I don't respond to spam!</p>
+    </article>
+    <form id="contact-form" action="#" method="POST" enctype="multipart/form-data">
+      <div class="row">
+        <label for="name">Name:<span>*</span></label><span class="error"></span>
+        <input class="name" name="name" type="text" value="" />
+      </div>
+      <div class="row">
+        <label for="email">Email:<span>*</span></label><span class="error"></span>
+        <input class="email" name="email" type="text" value="" />
+      </div>
+      <div class="row">
+        <label for="phone">Phone/Skype:</label><span class="error"></span>
+        <input class="phone" name="phone" type="text" value="" />
+      </div>
+      <div class="row">
+        <label for="message">Message:<span>*</span></label>
+        <textarea class="message" name="message" rows="10"></textarea>
+      </div>
+      <div class="submit-button disabled">Submit</div><span class="error"></span>
+    </form>     
+  </section>
+</article>

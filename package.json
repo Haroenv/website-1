@@ -1,0 +1,30 @@
+{
+  "author": "Blake Newman",
+  "name": "blakenewman",
+  "description": "http://blakenewman.co.uk",
+  "version": "1.0.0",
+  "homepage": "http://blakenewman.co.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blake-newman/website"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "auto-reload-brunch": "~1.7.8",
+    "clean-css-brunch": "~1.7.2",
+    "coffee-script-brunch": "~1.8.1",
+    "css-brunch": "~1.7.0",
+    "git-digest-brunch": "~1.0.3",
+    "groundskeeper-brunch": "0.0.3",
+    "handlebars-brunch": "~1.9.1",
+    "javascript-brunch": "~1.7.1",
+    "json-brunch": "~1.5.4",
+    "stylus-brunch": "~1.8.1",
+    "uglify-js-brunch": "~1.7.8"
+  },
+  "main": "public/index.html",
+  "license": "BSD"
+}

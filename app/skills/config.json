@@ -1,0 +1,9 @@
+{
+  "extends":"page",
+  "view":{
+    "attach":{
+      "to":"main"
+    }
+  }
+}
+

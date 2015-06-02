@@ -1,0 +1,70 @@
+$case($ev, $col)
+  &:nth-child({$ev}n)        
+    border: 5px solid $col
+    background: rgba($col, 0.1)
+    
+    &[data-click]
+      cursor:pointer
+      &:hover
+        background: rgba($col, 0.2)
+    
+    > .wrapper
+      > .image > img
+        border:2px solid $col
+  
+.portfolio
+  overflow:hidden
+  > .bg-image
+    width:100%
+    height:150px
+    background:url('../images/bg3.jpg')
+    background-size:100%
+    
+  > section
+    width:100%
+    background:white
+    box-sizing:border-box
+    padding:45px 30px 30px
+    
+    > article 
+      padding:0px
+      padding-bottom:20px      
+
+    > .cases
+      $wrapper()
+      clearfix()
+      
+        
+      > article      
+        float:left
+        box-sizing:border-box
+        padding:5px 30px 20px
+        margin-bottom:4%       
+        width:48%
+        margin-right:4%
+        overflow:hidden
+        
+        &:nth-child(2n)
+          margin-right:0%   
+          
+        @media all and (max-width:700px)
+          width:100%
+          
+          &:nth-child(1n+5)
+            display:none
+            
+          p:nth-child(1n+2)
+            display:none
+          
+
+        $case(1, $red)
+        $case(2, $blue)
+        $case(3, $green)
+        $case(4, $orange)
+          
+        > .wrapper
+          > .image, > .image > img
+            max-width:100%
+        
+      
+      

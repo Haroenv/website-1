@@ -1,0 +1,25 @@
+<article data-scroll="portfolio">
+
+  <div class="bg-image"></div>
+  <section>
+    <article>
+      <h1>Portfolio</h1>
+    </article>
+    <div class="cases">
+      {{#each cases}}
+      <article {{#if this.link}}data-click="{{this.link}}"{{/if}}>
+        <div class="wrapper">
+          <h3>{{this.title}}</h3>
+          <div class="image"><img src="images/cases/{{this.image}}" alt="{{this.title}}"></div>
+          <div class="desc">
+            {{#each this.desc}}
+            <p>{{{this}}}</p>
+            {{/each}}
+          </div>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+  </section>
+
+</article>

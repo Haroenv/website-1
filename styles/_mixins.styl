@@ -1,0 +1,22 @@
+$wrapper()
+  position:relative
+  width:100%
+  max-width:$pageWidth
+  margin:0 auto
+  box-sizing:border-box
+
+$submit() 
+  display:inline-block
+  padding:12px 15px
+  border: 3px solid $green
+  background-color: rgba($green, 0.1)
+  cursor:pointer
+  &:hover          
+    background-color: rgba($green, 0.3)
+    
+  &.disabled          
+    cursor:default
+    border: 3px solid $red
+    background-color: rgba(white, 0.3)
+    &:hover          
+      background-color: rgba(white, 0.3)

@@ -1,0 +1,48 @@
+{
+  "extends":"page",
+  "view":{
+    "attach":{
+      "to":"main"
+    }
+  }, 
+  "model":{
+    "cases":[
+      {
+        "title":"Tweak.js",
+        "image":"tweakjs.jpg",
+        "desc":[
+          "A lightweight component driven MVC Framework. Built using CoffeeScript, to combat the issues in structuring MVC applications; the MVC architecture is wrapped by reusable components.",
+          "This project is open-source. Used by Ignition to build an ecosystem of components; that are used in a range of projects. This website is powered by Tweak.js"
+        ],
+        "link":"//tweakjs.com"
+      },
+      {
+        "title":"Ignition",
+        "image":"ignition.jpg",
+        "desc":[
+          "I have proudly built plenty for Ignition whilst being their Lead Developer. The projects vary from applications, Command line tools, websites and eLearning.",
+          "Projects at Ignition have been fast paced, keeping me on my toes, I have worked with High profile Clients such as Goodyear, Toyota Europe, Nissan GB, Renault GB, L'Oreal and many more."
+        ],
+        "link":"//ignitiononline.com"
+      },
+      {
+        "title":"Present to Glass",
+        "image":"glass.jpg",
+        "desc":[
+          "When purchasing Google Glass, my first instinct was <i>'lets create something'</i>. So I did just that! I created a real-time application that communicates presentation notes to Google Glass to help aid those presenting.",
+          "The application is built in Java, using Sockets to communicate between the devices. There was many challenges to building a working application on a Beta platform, but now it's ready and waiting to be published."
+        ],
+        "link":"//present2.glass"
+      },
+      {
+        "title":"Eframe",
+        "image":"eframe.jpg",
+        "desc":[
+          "Eframe is a closed source tool for Ignition; extending Tweak.js to create an ecosystem of web components. This tool includes; hierarchy completion states, translation support and agnostic database integration.",
+          "Eframe comes with a CLI to manage projects and components. To aid it's modular structure it can export and import text for translation, smartly package applications, install and update components from an external repository."
+        ]
+      }
+    ]
+  }
+}
+

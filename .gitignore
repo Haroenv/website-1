@@ -1,0 +1,14 @@
+.DS_Store
+*.db
+node_modules
+bower_components
+public
+deliverables
+translations
+npm-debug.log
+.floo
+vendor/scripts/preload.js
+sh.exe.stackdump
+
+server/src/credentials.coffee
+server/lib/credentials.js

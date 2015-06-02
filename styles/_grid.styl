@@ -1,0 +1,97 @@
+col(amount, total, gutter = 0)
+  width: (((amount/total)*100) - (gutter/total))%
+  margin-left: ((gutter/total)/2)%
+  margin-right: ((gutter/total)/2)%
+
+row(amount, total, gutter = 0)
+  height: (((amount/total)*100) - (gutter/total))%
+  margin-top ((gutter/total)/2)%
+  margin-bottom: ((gutter/total)/2)%
+
+col-r(amount, total, gutter = 0)
+  width: (((amount/total)*100) - (gutter/total))%
+  margin-right: (gutter/total)%
+
+row-b(amount, total, gutter = 0)
+  height: (((amount/total)*100) - (gutter/total))%
+  margin-bottom: (gutter/total)%
+
+col-l(amount, total, gutter = 0)
+  width: (((amount/total)*100) - (gutter/total))%
+  margin-left: (gutter/total)%
+
+row-t(amount, total, gutter = 0)
+  height: (((amount/total)*100) - (gutter/total))%
+  margin-top: (gutter/total)%
+
+col-l-reset()
+  margin-left:0
+
+col-r-reset()
+  margin-right:0
+
+row-t-reset()
+  margin-top:0
+
+row-b-reset()
+  margin-bottom:0
+
+col-reset()
+  col-l-reset()
+  col-r-reset()
+
+row-reset()
+  row-l-reset()
+  row-r-reset()
+
+col-nomargin(amount, total, gutter = 0)
+  width: (((amount/total)*100) - (gutter/total))%
+  col-reset()
+  
+row-nomargin(amount, total, gutter = 0)
+  height: (((amount/total)*100) - (gutter/total))%  
+  row-reset()
+
+col-flex(height)
+  position:relative
+  &:before
+    content: ""
+    display: block
+    padding-top: height
+
+  & > *
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+grid(inc, start, end)
+  total = start
+  for n, x in 0..((end - start) / inc)
+    .col-{x+1}
+      width total
+    .row-{x+1}
+      height total
+    total = total + inc
+
+grid-flex(start, end, $width = 100%)  
+  for n, x in 0..(end - start)
+    num = x + 1
+    .col-{num}
+      width ($width / num)
+
+    .row-{num}
+      height ($width / num)
+
+grid-flex-col(start, end, $width = 100%)  
+  for n, x in 0..(end - start)
+    num = x + 1
+    .col-{num}
+      width ($width / num)
+
+grid-flex-row(start, end, $height = 100%) 
+  for n, x in 0..(end - start)
+    num = x + 1
+    .row-{num}
+      height ($height / num)
