@@ -1,0 +1,7 @@
+{
+  "view":{
+    "attach":{
+      "method":"before"
+    }
+  }
+}

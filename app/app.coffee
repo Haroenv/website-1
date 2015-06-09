@@ -28,6 +28,10 @@ class App extends tweak.Controller
     @addFooter()
 
 
+    $(window).on 'resize', @scrolled
+    $(window).on 'scroll', @scrolled
+
+
   mobilePlatform: ->
     ua = navigator.userAgent.toLowerCase()
     if /android\s[0-9\.]*/i.test ua then 'Android'
@@ -59,12 +63,16 @@ class App extends tweak.Controller
 
   addPages: ->
     @pages = {}
+    @pages_arr = []
     for page in pages
       Page = new tweak.Component @,
         name:page
       Page.init()
       Page.render()
       @pages[page] = Page
+      @pages_arr.unshift Page
+
+    console.log @pages
 
   first = null
   addRouting: ->
@@ -92,6 +100,10 @@ class App extends tweak.Controller
   scrollTo: (page, speed = 1) ->
     point = $("[data-scroll='#{page}'] > section").offset().top or 0
     Tween.to [$('body'),$('html')], speed, scrollTop:point, ease:Quart.EaseInOut
+
+  scrolled: =>
+    for key, page of @pages_arr when page.view.inView() then break
+    tweak.History.set page.name, {silent:false, replace:true}
 
 App = window.App = new App()
 App.init()

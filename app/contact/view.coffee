@@ -71,7 +71,7 @@ module.exports = exports = class ContactPageView extends PageView
       data = @model.get 'mail'
       $.ajax(
         type: 'POST',
-        url: 'http://blakenewman.co.uk:9812/mailer',
+        url: 'http://blakenewman.co.uk:8080/mailer',
         data: mail:data,
         success: -> $(targ).html 'Sent'
         error: -> $(targ).html 'Error sending'

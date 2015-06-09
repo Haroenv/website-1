@@ -9,7 +9,6 @@ module.exports = exports = class HeaderView extends tweak.View
     links.on 'mouseout click touchend', @buttonOut
 
     @root.addEvent 'page:changed', (data) ->
-      console.log data
       links.each ->
         $targ = $(@)
         $targ.removeClass 'active'

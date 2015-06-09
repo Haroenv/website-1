@@ -4,6 +4,12 @@
     "attach":{
       "to":"main"
     }
-  }
+  },
+  "components":[
+    {
+      "extends":"cartoon-me",
+      "name":"cartoon-me"
+    }
+  ]
 }
 

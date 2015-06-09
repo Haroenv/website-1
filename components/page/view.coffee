@@ -7,12 +7,11 @@ module.exports = exports = class PageView extends tweak.View
     $(window).on 'resize', @scrolled
     $(window).on 'scroll', @scrolled
 
-  inView: (item) ->
+  inView: (item = @el) ->    
     $item = $ item
-    $item.offset().top <= @scrollAmount <= $item.offset().top + $item.height()
+    $item.offset().top - (($(window).height()/4)*1) <= @scrollAmount <= $item.offset().top + $item.height() 
 
   scrolled: =>
     @scrollAmount = scrollTop = $('html')[0].scrollTop or $('body')[0].scrollTop
     height = $(window).height()
-    if @inView(@el) then tweak.History.set @component.name, {silent:false, replace:true}
-    Tween.to @element('.bg-image'), 0.2, backgroundPosition:"0px -#{(scrollTop/height)*250}px"
+    Tween.to @element('.bg-image'), 0.2, backgroundPosition:"0px -#{(scrollTop/height)*400}px"

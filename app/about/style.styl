@@ -1,35 +1,73 @@
 .about
+  position:relative
   overflow:hidden
   > .bg-image
-    background-image:url('../images/bg.jpg')
-    background-size:100%
-    background-repeat:repeat-y
+    position:relative
+    height:150px
     width:100%
-    height:100%
+    background-image:url('../images/bg.jpg')
+    background-size:contain
+    background-repeat:repeat
+    z-index:-1
     
-  > .main  
-    padding:100px 0 50px 0
-    text-align:center
-    font-family:$titleFont
-    .name      
-      color:white
-      font-size:80px
-        
-    .desc
-      color:rgba(white, 0.9)
-      font-size: 60px
+  > .main
+    $wrapper()
+    box-sizing:border-box      
+    padding:100px 30px 50px 30px
+    clearfix()
+    
+    > div.cartoon-me
+      float:left
+      width:30%
+      display:table-cell
+      vertical-align:middle
+      box-sizing:border-box
+      text-align:center
+      
+      > svg
+        display:inline-block
+        max-width:200px
+        width:100%
+      
+      @media all and (max-width:700px)
+        float:inherit
+        padding-bottom:30px 
+      
+    > article
+      position:relative
+      text-align:center
+      width:60%
+      margin: 20px 5%
+      margin-right:5%
+      float:right
+      border-top:2px solid black
+      border-bottom:2px solid black
+      height:160px
+      box-sizing:border-box
+     
+      .name      
+        font-size:42px
+          
+      .desc
+        font-size: 36px
 
-    @media all and (max-width:780px)      
-      .name
-        font-size: 60px
-      .desc
-        font-size: 45px
-  
-    @media all and (max-width:580px)      
-      .name
-        font-size: 46px
-      .desc
-        font-size: 32px
+      @media all and (max-width:750px)
+        width:50%
+        margin:20px 10%
+        .name
+          font-size: 36px        
+        .desc
+          font-size: 34px
+    
+      @media all and (max-width:700px)
+        width:100%
+        margin:0px
+        height:auto
+        float:inherit
+        .name
+          font-size: 46px
+        .desc
+          font-size: 32px
   
   > .about-me
     width:100%
