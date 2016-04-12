@@ -1,0 +1,17 @@
+export default {
+  'extra-small-screen': '(width <= 480px)',
+  'only-small-screen': '(width >= 480px) and (width <= 600px)',
+  'only-medium-screen': '(width >= 600px) and (width <= 800px)',
+  'only-large-screen': '(width >= 800px) and (width <= 960px)',
+  'max-screen': '(width >= 960px)',
+  'less-extra-small-screen': '(width <= 480px)',
+  'less-small-screen': '(width <= 600px)',
+  'less-medium-screen': '(width <= 800px)',
+  'less-large-screen': '(width <= 960px)',
+  'less-max-screen': '(width <= 1024px)',
+  'more-min-screen': '(width >= 320px)',
+  'more-extra-small-screen': '(width >= 480px)',
+  'more-small-screen': '(width >= 600px)',
+  'more-medium-screen': '(width >=800px)',
+  'more-large-screen': '(width >= 960px)',
+};

@@ -1,0 +1,60 @@
+# Packages #
+############
+# Just to be safe that erroneous packages don't accidentally get committed
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS && IDE files #
+###################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.settings
+.settings/*
+.buildpath
+.idea
+.project
+/nbproject/private/
+*.iml
+sftp-config*
+*.sublime-*
+
+# Node specific #
+#################
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+npm-debug.log
+node_modules/
+
+# Public Specific #
+###################
+/public_html/*
+
+# Ghost Specific #
+#####################!
+/ghost-data/**/*
+!/ghost-data/dev.db

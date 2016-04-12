@@ -1,0 +1,194 @@
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  min-width: var(--min-viewport);
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-width: var(--max-viewport);
+}
+
+main > aside {
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 30px 0;
+  width: 320px;
+
+  & > svg {
+    float: left;
+    height: 100px;
+    width: 100px;
+  }
+
+  & > div {
+    float: left;
+    position: relative;
+    margin: 18px;
+    padding: 10px;
+    border-top: 1px solid color(var(--black) alpha(20%));
+    border-bottom: 1px solid color(var(--black) alpha(20%));
+    min-width: 160px;
+    text-align: center;
+
+    & > p {
+      margin: 0;
+    }
+  }
+}
+
+.page {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 40px 30px 70px;
+  width: 100%;
+  min-height: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+hr {
+  display: block;
+  margin: 3.2em 0;
+  padding: 0;
+  border: 0;
+  border-top: #efefef 1px solid;
+  height: 1px;
+}
+
+blockquote {
+  box-sizing: border-box;
+  margin: 1.75em 0 1.75em -2.2em;
+  padding: 0 0 0 1.75em;
+  border-left: #4a4a4a 0.4em solid;
+}
+
+mark {
+  background-color: #fdffb6;
+}
+
+code,
+tt {
+  padding: 1px 3px;
+  border: #efedf3 1px solid;
+  border-radius: 2px;
+  background: #f7fafb;
+}
+
+pre {
+  overflow: auto;
+  box-sizing: border-box;
+  margin: 0 0 1.75em 0;
+  padding: 10px;
+  border: #efedf3 1px solid;
+  border-radius: 3px;
+  width: 100%;
+  background: #f7fafb;
+}
+
+pre code,
+pre tt {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+}
+
+table {
+  box-sizing: border-box;
+  margin: 1.75em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border-top: #efefef 1px solid;
+  line-height: 20px;
+  vertical-align: top;
+  text-align: left;
+}
+
+table th { color: #000; }
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+table tbody + tbody { border-top: #efefef 2px solid; }
+table table table { background-color: #fff; }
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background-color: #f6f6f6;
+}
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+  background: transparent;
+}
+
+.fluid-width-video-wrapper {
+  position: relative;
+  padding: 0;
+  width: 100%;
+}
+.fluid-width-video-wrapper iframe,
+.fluid-width-video-wrapper object,
+.fluid-width-video-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+iframe,
+.fluid-width-video-wrapper {
+  display: block;
+  margin: 1.75em 0;
+}
+
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+.fluid-width-video-wrapper iframe {
+  margin: 0;
+}

@@ -1,0 +1,34 @@
+@define-mixin box-background $color, $alpha: 10% {
+  background: color($color alpha($alpha));
+
+  @mixin-content;
+}
+
+@define-mixin box $border, $color, $alpha: 10% {
+  border: $border solid $color;
+
+  @mixin box-background $color, $alpha;
+  @mixin-content;
+}
+
+@define-mixin box-link $color, $alpha: 10% {
+  &:matches(:hover, :active) {
+    @mixin box-background $color, calc($alpha * 2);
+    @mixin-content;
+  }
+}
+
+@define-mixin box-link-overlay $color, $alpha: 10% {
+  &:matches(:hover, :active) {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @mixin box-background $color, calc($alpha * 2);
+      @mixin-content;
+    }
+  }
+}

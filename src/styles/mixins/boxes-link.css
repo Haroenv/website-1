@@ -1,0 +1,31 @@
+@import './box.css';
+
+@define-mixin boxes-link $alpha: 10%, $selector: & {
+  &:nth-child(4n-3) {
+    $selector {
+      @mixin box-link var(--green), $alpha;
+    }
+  }
+
+  &:nth-child(4n-2) {
+    $selector {
+      @mixin box-link var(--blue), $alpha;
+    }
+  }
+
+  &:nth-child(4n-1) {
+    $selector {
+      @mixin box-link var(--red), $alpha;
+    }
+  }
+
+  &:nth-child(4n) {
+    $selector {
+      @mixin box-link var(--orange), $alpha;
+    }
+  }
+
+  $selector {
+    @mixin-content;
+  }
+}

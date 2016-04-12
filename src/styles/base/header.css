@@ -1,0 +1,42 @@
+@import '../mixins/box.css';
+@import '../mixins/boxes.css';
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+
+  & > nav {
+    padding: 10px;
+    border-bottom: 1px solid var(--black);
+    width: 100%;
+    background: color(var(--white) alpha(-10%));
+
+    & > a {
+      display: inline-block;
+      margin: 2.5px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+
+      @mixin box 0, var(--black), 90%;
+
+      &:hover,
+      &:active,
+      &.v-link-active {
+        @mixin boxes 0, 90%;
+      }
+
+      &:any-link {
+        color: var(--white);
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}

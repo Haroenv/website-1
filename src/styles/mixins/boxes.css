@@ -1,0 +1,31 @@
+@import './box.css';
+
+@define-mixin boxes $border, $alpha: 10%, $selector: & {
+  &:nth-child(4n-3) {
+    $selector {
+      @mixin box $border, var(--green), $alpha;
+    }
+  }
+
+  &:nth-child(4n-2) {
+    $selector {
+      @mixin box $border, var(--blue), $alpha;
+    }
+  }
+
+  &:nth-child(4n-1) {
+    $selector {
+      @mixin box $border, var(--red), $alpha;
+    }
+  }
+
+  &:nth-child(4n) {
+    $selector {
+      @mixin box $border, var(--orange), $alpha;
+    }
+  }
+
+  $selector {
+    @mixin-content;
+  }
+}
